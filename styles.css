@@ -17,6 +17,7 @@ body{
   
   font-family: 'Anybody', cursive;
   font-size: 18px;
+  color: #06AFBE;
 }
 
 .container{
@@ -53,6 +54,26 @@ body{
   text-decoration: none;
   font-weight: bold;
   text-transform: uppercase;
+  color: var(--color-text-menu);
+  font-size: 1em;
+}
+
+.lang_box {
+  display: flex;
+  flex-direction: row-reverse;
+  width: 50%;
+}
+
+.lang_link {
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: var(--color-text-menu);
+  font-size: 1em;
+}
+
+.resource_link {
+  text-decoration: none;
   color: var(--color-text-menu);
   font-size: 1em;
 }
@@ -350,6 +371,10 @@ h2{
   font-size: 20px;
 }
 
+.resources-box {
+  margin-top: 100px;
+}
+
 @media screen and (max-width:1000px){
 
   .container{
@@ -575,7 +600,7 @@ h2{
   }
 
   .box h3{
-    width: 163px;
+    width: 193px;
   }
 
   .box img{
