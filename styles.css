@@ -70,6 +70,8 @@ body{
   text-transform: uppercase;
   color: var(--color-text-menu);
   font-size: 1em;
+  margin-left: 3px;
+  margin-right: 3px;
 }
 
 .resource_link {
