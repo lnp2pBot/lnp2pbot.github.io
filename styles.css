@@ -377,6 +377,11 @@ h2{
   margin-top: 100px;
 }
 
+.disclaimer-box {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
 @media screen and (max-width:1000px){
 
   .container{
