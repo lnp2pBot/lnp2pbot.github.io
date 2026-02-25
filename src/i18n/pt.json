@@ -1,0 +1,128 @@
+{
+  "nav": {
+    "learn": "Aprenda",
+    "orders": "Ordens",
+    "chat": "Chat",
+    "github": "GitHub",
+    "launchBot": "Abrir Bot ⚡"
+  },
+  "hero": {
+    "badge": "⚡ Sem KYC · Peer-to-Peer · Lightning Network",
+    "titleStart": "Bitcoin para",
+    "titleHighlight": "o Povo",
+    "description": "Vamos restabelecer a natureza peer-to-peer do Bitcoin! Troque sats pela sua moeda local diretamente com outras pessoas. Sem intermediários, sem dados pessoais necessários.",
+    "cta": "Abrir Bot ⚡",
+    "ctaSecondary": "Como funciona →"
+  },
+  "features": {
+    "title": "Por que lnp2pBot?",
+    "subtitle": "Bitcoin é uma tecnologia de poupança acessível e equitativa, e um meio de troca resistente à censura.",
+    "items": [
+      {
+        "icon": "🔒",
+        "title": "Proteja Sua Privacidade",
+        "description": "lnp2pBot nunca pedirá seus dados pessoais. Sem KYC, sem registro, sem verificação de identidade. Seus sats, seu assunto."
+      },
+      {
+        "icon": "⚡",
+        "title": "Rápido como um Raio",
+        "description": "Impulsionado pela Lightning Network para transações instantâneas de Bitcoin a um custo mínimo sem perder as propriedades fundamentais do Bitcoin."
+      },
+      {
+        "icon": "🌍",
+        "title": "Encontre Sua Comunidade",
+        "description": "Junte-se a uma comunidade existente ou crie a sua. Troque sats pela sua moeda local com pessoas próximas a você."
+      },
+      {
+        "icon": "🤝",
+        "title": "Verdadeiro Peer-to-Peer",
+        "description": "Bitcoin foi projetado para transações peer-to-peer. lnp2pBot traz essa visão à vida, conectando compradores e vendedores diretamente."
+      },
+      {
+        "icon": "🛡️",
+        "title": "Resistente à Censura",
+        "description": "Construído sobre protocolos abertos. Nenhuma entidade pode desligá-lo, bloquear suas transações ou congelar seus fundos."
+      },
+      {
+        "icon": "📖",
+        "title": "Código Aberto",
+        "description": "Totalmente transparente e dirigido pela comunidade. Qualquer pessoa pode revisar, contribuir ou executar sua própria instância do bot."
+      }
+    ]
+  },
+  "howItWorks": {
+    "title": "Como Funciona",
+    "subtitle": "Quatro passos simples para trocar Bitcoin peer-to-peer",
+    "steps": [
+      {
+        "title": "Abra o Bot",
+        "description": "Inicie uma conversa com @lnp2pBot no Telegram. Não precisa se registrar."
+      },
+      {
+        "title": "Crie ou Pegue uma Ordem",
+        "description": "Publique uma ordem de compra ou venda com o valor, moeda e método de pagamento de sua preferência, ou pegue uma existente."
+      },
+      {
+        "title": "Troque P2P",
+        "description": "O bot custodia os sats via hold invoices Lightning. Envie ou receba o pagamento fiat, depois confirme para liberar os fundos."
+      },
+      {
+        "title": "Receba Seus Sats",
+        "description": "Quando ambas as partes confirmam, o pagamento Lightning é liquidado instantaneamente. Pronto — sem intermediários, sem KYC."
+      }
+    ]
+  },
+  "resources": {
+    "title": "Recursos",
+    "subtitle": "Tudo o que você precisa para começar",
+    "items": [
+      {
+        "icon": "📚",
+        "title": "Documentação",
+        "description": "Guias passo a passo sobre como usar o bot",
+        "label": "Ler Docs"
+      },
+      {
+        "icon": "📊",
+        "title": "Ordens ao Vivo",
+        "description": "Explore todas as ordens ativas de compra e venda",
+        "label": "Ver Ordens"
+      },
+      {
+        "icon": "💬",
+        "title": "Chat de Suporte",
+        "description": "Obtenha ajuda da comunidade",
+        "label": "Entrar no Chat"
+      },
+      {
+        "icon": "🏥",
+        "title": "Saúde do Bot",
+        "description": "Dashboard de monitoramento de saúde em tempo real",
+        "label": "Ver Status"
+      }
+    ]
+  },
+  "footer": {
+    "tagline": "Sem KYC · Trading P2P Lightning",
+    "product": "Produto",
+    "launchBot": "Abrir Bot",
+    "liveOrders": "Ordens ao Vivo",
+    "botHealth": "Saúde do Bot",
+    "learn": "Aprenda",
+    "documentation": "Documentação",
+    "tutorials": "Tutoriais",
+    "community": "Comunidade",
+    "featuredBy": "Projeto destaque por",
+    "rights": "Todos os direitos invertidos."
+  },
+  "disclaimer": {
+    "title": "Aviso Legal",
+    "subtitle": "Ao usar o bot de troca P2P, você concorda com os seguintes termos e condições:",
+    "paragraphs": [
+      "O bot é um software de código aberto disponível para qualquer pessoa usar, copiar, modificar e executar. Os desenvolvedores não são responsáveis pelas ações de outros indivíduos que usem o software de qualquer maneira, seja legal ou ilegal, honesta ou desonesta.",
+      "O bot é fornecido \"como está\" e \"conforme disponível\", e os desenvolvedores não fazem garantias de qualquer tipo, expressas ou implícitas, com relação ao bot ou ao seu uso.",
+      "Os desenvolvedores e os mediadores de disputas fazem o possível para remover maus atores, fraudes e golpes do uso do bot, mas o usuário reconhece que o sistema pode ser explorado e aceita total responsabilidade ao usá-lo.",
+      "Nem os desenvolvedores nem os mediadores de disputas são responsáveis por quaisquer perdas ou danos que o usuário possa sofrer como resultado do uso do bot."
+    ]
+  }
+}

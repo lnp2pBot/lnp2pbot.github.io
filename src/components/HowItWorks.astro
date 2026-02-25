@@ -1,0 +1,40 @@
+---
+import { t, type Lang } from '../i18n';
+
+interface Props { lang: Lang; }
+const { lang } = Astro.props;
+const i = t(lang);
+const isRtl = lang === 'fa';
+const numbers = ['01', '02', '03', '04'];
+---
+
+<section id="how-it-works" dir={isRtl ? 'rtl' : 'ltr'}>
+  <div class="container">
+    <h2>{i.howItWorks.title}</h2>
+    <p class="subtitle">{i.howItWorks.subtitle}</p>
+    <div class="steps-grid">
+      {i.howItWorks.steps.map((s: any, idx: number) => (
+        <div class="step-card glass">
+          <span class="step-number">{numbers[idx]}</span>
+          <h3>{s.title}</h3>
+          <p>{s.description}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .steps-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; }
+  .step-card { padding: 2rem 1.5rem; text-align: center; }
+  .step-number {
+    font-size: 3rem; font-weight: 800;
+    background: linear-gradient(135deg, var(--accent), var(--accent-light));
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    display: block; margin-bottom: 1rem;
+  }
+  .step-card h3 { font-size: 1.1rem; margin-bottom: 0.7rem; }
+  .step-card p { color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6; }
+  @media (max-width: 768px) { .steps-grid { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 480px) { .steps-grid { grid-template-columns: 1fr; } }
+</style>

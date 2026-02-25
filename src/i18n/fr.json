@@ -1,0 +1,128 @@
+{
+  "nav": {
+    "learn": "Apprendre",
+    "orders": "Ordres",
+    "chat": "Chat",
+    "github": "GitHub",
+    "launchBot": "Lancer le Bot ⚡"
+  },
+  "hero": {
+    "badge": "⚡ Sans KYC · Pair-à-Pair · Lightning Network",
+    "titleStart": "Bitcoin pour",
+    "titleHighlight": "le Peuple",
+    "description": "Rétablissons la nature pair-à-pair de Bitcoin ! Échangez des sats contre votre monnaie locale directement avec d'autres personnes. Pas d'intermédiaires, pas de données personnelles requises.",
+    "cta": "Lancer le Bot ⚡",
+    "ctaSecondary": "Comment ça marche →"
+  },
+  "features": {
+    "title": "Pourquoi lnp2pBot ?",
+    "subtitle": "Bitcoin est une technologie d'épargne accessible et équitable, et un moyen d'échange résistant à la censure.",
+    "items": [
+      {
+        "icon": "🔒",
+        "title": "Protégez Votre Vie Privée",
+        "description": "lnp2pBot ne vous demandera jamais de données personnelles. Pas de KYC, pas d'inscription, pas de vérification d'identité. Vos sats, votre affaire."
+      },
+      {
+        "icon": "⚡",
+        "title": "Rapide comme l'Éclair",
+        "description": "Propulsé par le Lightning Network pour des transactions Bitcoin instantanées à un coût minimal sans perdre les propriétés fondamentales de Bitcoin."
+      },
+      {
+        "icon": "🌍",
+        "title": "Trouvez Votre Communauté",
+        "description": "Rejoignez une communauté existante ou créez la vôtre. Échangez des sats contre votre monnaie locale avec des personnes proches de vous."
+      },
+      {
+        "icon": "🤝",
+        "title": "Vrai Pair-à-Pair",
+        "description": "Bitcoin a été conçu pour les transactions pair-à-pair. lnp2pBot concrétise cette vision en connectant directement acheteurs et vendeurs."
+      },
+      {
+        "icon": "🛡️",
+        "title": "Résistant à la Censure",
+        "description": "Construit sur des protocoles ouverts. Aucune entité ne peut l'arrêter, bloquer vos transactions ou geler vos fonds."
+      },
+      {
+        "icon": "📖",
+        "title": "Open Source",
+        "description": "Entièrement transparent et dirigé par la communauté. N'importe qui peut examiner, contribuer ou exécuter sa propre instance du bot."
+      }
+    ]
+  },
+  "howItWorks": {
+    "title": "Comment Ça Marche",
+    "subtitle": "Quatre étapes simples pour échanger du Bitcoin pair-à-pair",
+    "steps": [
+      {
+        "title": "Ouvrez le Bot",
+        "description": "Commencez une conversation avec @lnp2pBot sur Telegram. Aucune inscription nécessaire."
+      },
+      {
+        "title": "Créez ou Prenez un Ordre",
+        "description": "Publiez un ordre d'achat ou de vente avec le montant, la devise et le mode de paiement de votre choix, ou prenez un ordre existant."
+      },
+      {
+        "title": "Échangez en P2P",
+        "description": "Le bot met les sats en séquestre via des hold invoices Lightning. Envoyez ou recevez le paiement fiat, puis confirmez pour libérer les fonds."
+      },
+      {
+        "title": "Recevez Vos Sats",
+        "description": "Une fois que les deux parties confirment, le paiement Lightning est réglé instantanément. Terminé — pas d'intermédiaires, pas de KYC."
+      }
+    ]
+  },
+  "resources": {
+    "title": "Ressources",
+    "subtitle": "Tout ce dont vous avez besoin pour commencer",
+    "items": [
+      {
+        "icon": "📚",
+        "title": "Documentation",
+        "description": "Guides étape par étape sur l'utilisation du bot",
+        "label": "Lire les Docs"
+      },
+      {
+        "icon": "📊",
+        "title": "Ordres en Direct",
+        "description": "Parcourez tous les ordres d'achat et de vente actifs",
+        "label": "Voir les Ordres"
+      },
+      {
+        "icon": "💬",
+        "title": "Chat de Support",
+        "description": "Obtenez de l'aide de la communauté",
+        "label": "Rejoindre le Chat"
+      },
+      {
+        "icon": "🏥",
+        "title": "Santé du Bot",
+        "description": "Tableau de bord de surveillance en temps réel",
+        "label": "Voir le Statut"
+      }
+    ]
+  },
+  "footer": {
+    "tagline": "Sans KYC · Trading P2P Lightning",
+    "product": "Produit",
+    "launchBot": "Lancer le Bot",
+    "liveOrders": "Ordres en Direct",
+    "botHealth": "Santé du Bot",
+    "learn": "Apprendre",
+    "documentation": "Documentation",
+    "tutorials": "Tutoriels",
+    "community": "Communauté",
+    "featuredBy": "Projet mis en avant par",
+    "rights": "Tous droits inversés."
+  },
+  "disclaimer": {
+    "title": "Avertissement",
+    "subtitle": "En utilisant le bot de trading P2P, vous acceptez les termes et conditions suivants :",
+    "paragraphs": [
+      "Le bot est un logiciel open-source disponible pour que quiconque puisse l'utiliser, le copier, le modifier et l'exécuter. Les développeurs ne sont pas responsables des actions d'autres personnes utilisant le logiciel de quelque manière que ce soit, légale ou illégale, honnête ou malhonnête.",
+      "Le bot est fourni \"tel quel\" et \"selon disponibilité\", et les développeurs ne font aucune garantie d'aucune sorte, expresse ou implicite, concernant le bot ou son utilisation.",
+      "Les développeurs et les médiateurs de litiges font de leur mieux pour supprimer les acteurs malveillants, les fraudes et les arnaques de l'utilisation du bot, mais l'utilisateur reconnaît que le système peut être exploité et accepte l'entière responsabilité de son utilisation.",
+      "Ni les développeurs ni les médiateurs de litiges ne sont responsables des pertes ou dommages que l'utilisateur pourrait subir suite à l'utilisation du bot."
+    ]
+  }
+}

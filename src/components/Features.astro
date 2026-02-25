@@ -1,0 +1,33 @@
+---
+import { t, type Lang } from '../i18n';
+
+interface Props { lang: Lang; }
+const { lang } = Astro.props;
+const i = t(lang);
+const isRtl = lang === 'fa';
+---
+
+<section id="features" dir={isRtl ? 'rtl' : 'ltr'}>
+  <div class="container">
+    <h2>{i.features.title}</h2>
+    <p class="subtitle">{i.features.subtitle}</p>
+    <div class="features-grid">
+      {i.features.items.map((f: any) => (
+        <div class="feature-card glass">
+          <span class="feature-icon">{f.icon}</span>
+          <h3>{f.title}</h3>
+          <p>{f.description}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .features-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+  .feature-card { padding: 2rem; text-align: center; }
+  .feature-icon { font-size: 2.5rem; display: block; margin-bottom: 1rem; }
+  .feature-card h3 { font-size: 1.2rem; margin-bottom: 0.7rem; color: var(--text-primary); }
+  .feature-card p { color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; }
+  @media (max-width: 768px) { .features-grid { grid-template-columns: 1fr; } }
+</style>

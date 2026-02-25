@@ -1,0 +1,52 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { t } from '../../i18n';
+
+const lang = 'pt';
+const i = t(lang);
+---
+
+<Layout title={`${i.disclaimer.title} — lnp2pBot`}>
+  <Header lang={lang} />
+  <main class="container disclaimer-page" dir={lang === 'fa' ? 'rtl' : 'ltr'}>
+    <h1>{i.disclaimer.title}</h1>
+    <h3>{i.disclaimer.subtitle}</h3>
+    <div class="disclaimer-content">
+      {i.disclaimer.paragraphs.map((p: string) => <p>{p}</p>)}
+    </div>
+  </main>
+  <Footer lang={lang} />
+</Layout>
+
+<style>
+  .disclaimer-page {
+    padding-top: 120px;
+    padding-bottom: 4rem;
+    max-width: 800px;
+  }
+  .disclaimer-page h1 {
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(135deg, var(--accent), var(--accent-light));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .disclaimer-page h3 {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+  }
+  .disclaimer-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+  .disclaimer-content p {
+    color: var(--text-secondary);
+    line-height: 1.8;
+  }
+</style>

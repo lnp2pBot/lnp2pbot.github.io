@@ -1,0 +1,109 @@
+---
+import { t, languages, getLinks, type Lang } from '../i18n';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const i = t(lang);
+const links = getLinks(lang);
+---
+
+<header>
+  <div class="container header-inner">
+    <a href={lang === 'en' ? '/' : `/${lang}/`} class="logo-link">
+      <img src="/img/logo.png" alt="lnp2pBot" class="logo" />
+      <span class="logo-text">lnp2pBot</span>
+    </a>
+
+    <nav>
+      <a href={links.learn} target="_blank">{i.nav.learn}</a>
+      <a href={links.orders} target="_blank">{i.nav.orders}</a>
+      <a href={links.chat} target="_blank">{i.nav.chat}</a>
+      <a href={links.github} target="_blank">{i.nav.github}</a>
+    </nav>
+
+    <div class="header-actions">
+      <div class="lang-switcher">
+        {Object.entries(languages).map(([code, { label, flag }]) => (
+          <a
+            href={code === 'en' ? '/' : `/${code}/`}
+            class:list={['lang-link', { active: code === lang }]}
+          >
+            {flag}
+          </a>
+        ))}
+      </div>
+      <a href={links.twitter} target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Twitter">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+      </a>
+      <a href={links.nostr} target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Nostr">
+        <svg width="30" height="30" viewBox="0 0 256 256" fill="currentColor"><path d="M210.8 199.4c0 3.1-2.5 5.7-5.7 5.7h-68c-3.1 0-5.7-2.5-5.7-5.7v-15.5c.3-19 2.3-37.2 6.5-45.5 2.5-5 6.7-7.7 11.5-9.1 9.1-2.7 24.9-.9 31.7-1.2 0 0 20.4.8 20.4-10.7s-9.1-8.6-9.1-8.6c-10 .3-17.7-.4-22.6-2.4-8.3-3.3-8.6-9.2-8.6-11.2-.4-23.1-34.5-25.9-64.5-20.1-32.8 6.2.4 53.3.4 116.1v8.4c0 3.1-2.6 5.6-5.7 5.6H57.7c-3.1 0-5.7-2.5-5.7-5.7v-144c0-3.1 2.5-5.7 5.7-5.7h31.7c3.1 0 5.7 2.5 5.7 5.7 0 4.7 5.2 7.2 9 4.5 11.4-8.2 26-12.5 42.4-12.5 36.6 0 64.4 21.4 64.4 68.7v83.2ZM150 99.3c0-6.7-5.4-12.1-12.1-12.1s-12.1 5.4-12.1 12.1 5.4 12.1 12.1 12.1S150 106 150 99.3Z"/></svg>
+      </a>
+      <a href={links.bot} target="_blank" rel="noopener noreferrer" class="btn-primary btn-sm">
+        {i.nav.launchBot}
+      </a>
+    </div>
+  </div>
+</header>
+
+<style>
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background: rgba(15, 25, 35, 0.85);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+  }
+
+  .logo-link {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    color: var(--text-primary);
+  }
+
+  .logo-link:hover { color: var(--text-primary); }
+
+  .logo { width: auto; height: 36px; }
+  .logo-text { font-weight: 700; font-size: 1.2rem; }
+
+  nav { display: flex; gap: 2rem; }
+  nav a { color: var(--text-secondary); font-weight: 500; transition: color 0.2s; }
+  nav a:hover { color: var(--text-primary); }
+
+  .header-actions { display: flex; align-items: center; gap: 1rem; }
+
+  .lang-switcher { display: flex; gap: 0.3rem; }
+  .lang-link {
+    font-size: 1.1rem;
+    padding: 0.2rem 0.3rem;
+    border-radius: 4px;
+    opacity: 0.5;
+    transition: opacity 0.2s;
+  }
+  .lang-link:hover { opacity: 0.8; }
+  .lang-link.active { opacity: 1; background: rgba(0,180,216,0.1); }
+
+  .social-icon { color: var(--text-secondary); transition: color 0.2s; }
+  .social-icon:hover { color: var(--accent); }
+  .btn-sm { padding: 0.5rem 1.2rem; font-size: 0.9rem; }
+
+  @media (max-width: 768px) {
+    nav { display: none; }
+    .logo-text { display: none; }
+    .lang-switcher { display: none; }
+  }
+</style>

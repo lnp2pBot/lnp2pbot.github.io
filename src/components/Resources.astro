@@ -1,0 +1,43 @@
+---
+import { t, getLinks, type Lang } from '../i18n';
+
+interface Props { lang: Lang; }
+const { lang } = Astro.props;
+const i = t(lang);
+const links = getLinks(lang);
+const isRtl = lang === 'fa';
+
+const urls = [links.learn, links.orders, links.chat, links.health];
+---
+
+<section id="resources" dir={isRtl ? 'rtl' : 'ltr'}>
+  <div class="container">
+    <h2>{i.resources.title}</h2>
+    <p class="subtitle">{i.resources.subtitle}</p>
+    <div class="resources-grid">
+      {i.resources.items.map((r: any, idx: number) => (
+        <a href={urls[idx]} target="_blank" rel="noopener noreferrer" class="resource-card glass">
+          <span class="resource-icon">{r.icon}</span>
+          <h3>{r.title}</h3>
+          <p>{r.description}</p>
+          <span class="resource-link">{r.label} →</span>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .resources-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; }
+  .resource-card {
+    padding: 2rem; text-align: center; display: flex; flex-direction: column;
+    align-items: center; color: var(--text-primary);
+  }
+  .resource-card:hover { color: var(--text-primary); }
+  .resource-icon { font-size: 2.5rem; margin-bottom: 1rem; }
+  .resource-card h3 { font-size: 1.1rem; margin-bottom: 0.5rem; }
+  .resource-card p { color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1rem; flex: 1; }
+  .resource-link { color: var(--accent); font-weight: 600; font-size: 0.9rem; }
+  @media (max-width: 768px) { .resources-grid { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 480px) { .resources-grid { grid-template-columns: 1fr; } }
+</style>

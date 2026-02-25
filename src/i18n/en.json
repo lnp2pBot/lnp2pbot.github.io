@@ -1,0 +1,128 @@
+{
+  "nav": {
+    "learn": "Learn",
+    "orders": "Orders",
+    "chat": "Chat",
+    "github": "GitHub",
+    "launchBot": "Launch Bot ⚡"
+  },
+  "hero": {
+    "badge": "⚡ No KYC · Peer-to-Peer · Lightning Network",
+    "titleStart": "Bitcoin for",
+    "titleHighlight": "the People",
+    "description": "Let's reestablish the peer-to-peer nature of Bitcoin! Exchange sats for your local currency directly with other humans. No middlemen, no personal data required.",
+    "cta": "Launch Bot ⚡",
+    "ctaSecondary": "How it works →"
+  },
+  "features": {
+    "title": "Why lnp2pBot?",
+    "subtitle": "Bitcoin is an accessible and equitable savings technology and a censorship-resistant medium of exchange.",
+    "items": [
+      {
+        "icon": "🔒",
+        "title": "Keep Your Privacy",
+        "description": "lnp2pBot will never ask you for personal data. No KYC, no registration, no identity verification. Your sats, your business."
+      },
+      {
+        "icon": "⚡",
+        "title": "Lightning Fast",
+        "description": "Powered by the Lightning Network for instant Bitcoin transactions at minimal cost without losing any of Bitcoin's core properties."
+      },
+      {
+        "icon": "🌍",
+        "title": "Find Your Community",
+        "description": "Join an existing community or create your own. Exchange sats for your local currency with people near you."
+      },
+      {
+        "icon": "🤝",
+        "title": "True Peer-to-Peer",
+        "description": "Bitcoin was designed for peer-to-peer transactions. lnp2pBot brings that vision to life, connecting buyers and sellers directly."
+      },
+      {
+        "icon": "🛡️",
+        "title": "Censorship Resistant",
+        "description": "Built on open protocols. No single entity can shut it down, block your transactions, or freeze your funds."
+      },
+      {
+        "icon": "📖",
+        "title": "Open Source",
+        "description": "Fully transparent and community-driven. Anyone can review, contribute, or run their own instance of the bot."
+      }
+    ]
+  },
+  "howItWorks": {
+    "title": "How It Works",
+    "subtitle": "Four simple steps to trade Bitcoin peer-to-peer",
+    "steps": [
+      {
+        "title": "Open the Bot",
+        "description": "Start a conversation with @lnp2pBot on Telegram. No registration needed."
+      },
+      {
+        "title": "Create or Take an Order",
+        "description": "Post a buy or sell order with your preferred amount, currency, and payment method — or take an existing one."
+      },
+      {
+        "title": "Trade P2P",
+        "description": "The bot escrows the sats via Lightning hold invoices. Send or receive fiat payment, then confirm to release funds."
+      },
+      {
+        "title": "Receive Your Sats",
+        "description": "Once both parties confirm, the Lightning payment is settled instantly. Done — no intermediaries, no KYC."
+      }
+    ]
+  },
+  "resources": {
+    "title": "Resources",
+    "subtitle": "Everything you need to get started",
+    "items": [
+      {
+        "icon": "📚",
+        "title": "Documentation",
+        "description": "Step-by-step guides on how to use the bot",
+        "label": "Read Docs"
+      },
+      {
+        "icon": "📊",
+        "title": "Live Orders",
+        "description": "Browse all active buy and sell orders",
+        "label": "View Orders"
+      },
+      {
+        "icon": "💬",
+        "title": "Support Chat",
+        "description": "Get help from the community",
+        "label": "Join Chat"
+      },
+      {
+        "icon": "🏥",
+        "title": "Bot Health",
+        "description": "Real-time health monitoring dashboard",
+        "label": "Check Status"
+      }
+    ]
+  },
+  "footer": {
+    "tagline": "No KYC · P2P Lightning Trading",
+    "product": "Product",
+    "launchBot": "Launch Bot",
+    "liveOrders": "Live Orders",
+    "botHealth": "Bot Health",
+    "learn": "Learn",
+    "documentation": "Documentation",
+    "tutorials": "Tutorials",
+    "community": "Community",
+    "featuredBy": "Featured project by",
+    "rights": "All rights reversed."
+  },
+  "disclaimer": {
+    "title": "Disclaimer",
+    "subtitle": "By using the P2P trade bot, you agree to the following terms and conditions:",
+    "paragraphs": [
+      "The bot is an open-source software that is available for anyone to use, copy, modify, and run. The developers are not responsible for the actions of other individuals using the software in any manner, whether legal or illegal, honest or dishonest.",
+      "The bot is provided on an \"as is\" and \"as available\" basis, and the developers make no warranties of any kind, express or implied, with respect to the bot or its use.",
+      "The developers and the dispute resolvers make their best efforts to remove bad actors, frauds, and scams from using the bot, but the user recognizes that the system can be exploited and accepts full responsibility while using it.",
+      "Neither the developers nor the dispute resolvers are responsible for any losses or damages that the user may suffer as a result of using the bot."
+    ]
+  }
+}

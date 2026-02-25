@@ -1,0 +1,41 @@
+---
+import AnimatedBackground from '../components/AnimatedBackground.astro';
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="lnp2pBot — Exchange Bitcoin peer-to-peer through Lightning Network without KYC" />
+  <meta property="og:url" content="https://lnp2pbot.com" />
+  <meta property="og:title" content={title} />
+  <meta property="og:image" content="https://lnp2pbot.com/img/logo.png" />
+  <meta property="og:description" content="Exchange Bitcoin peer-to-peer through Lightning Network without KYC" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@lnp2pBot" />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content="Exchange Bitcoin peer-to-peer through Lightning Network without KYC" />
+  <meta name="twitter:image" content="https://lnp2pbot.com/img/logo.png" />
+  <link rel="icon" type="image/png" href="/img/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <title>{title}</title>
+</head>
+<body>
+  <div class="starfield"></div>
+  <AnimatedBackground />
+  <slot />
+</body>
+</html>
+
+<style is:global>
+  @import '../styles/global.css';
+</style>

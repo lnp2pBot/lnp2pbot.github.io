@@ -1,0 +1,87 @@
+---
+import { t, getLinks, type Lang } from '../i18n';
+
+interface Props { lang: Lang; }
+const { lang } = Astro.props;
+const i = t(lang);
+const links = getLinks(lang);
+const isRtl = lang === 'fa';
+const disclaimerUrl = lang === 'en' ? '/disclaimer' : `/${lang}/disclaimer`;
+---
+
+<footer dir={isRtl ? 'rtl' : 'ltr'}>
+  <div class="container footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="footer-brand-row">
+          <img src="/img/logo.png" alt="lnp2pBot" class="footer-logo" />
+          <span class="footer-name">lnp2pBot</span>
+        </div>
+        <p class="footer-tagline">{i.footer.tagline}</p>
+      </div>
+
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4>{i.footer.product}</h4>
+          <a href={links.bot} target="_blank">{i.footer.launchBot}</a>
+          <a href={links.orders} target="_blank">{i.footer.liveOrders}</a>
+          <a href={links.health} target="_blank">{i.footer.botHealth}</a>
+        </div>
+        <div class="footer-col">
+          <h4>{i.footer.learn}</h4>
+          <a href={links.learn} target="_blank">{i.footer.documentation}</a>
+          <a href={links.learn} target="_blank">{i.footer.tutorials}</a>
+        </div>
+        <div class="footer-col">
+          <h4>{i.footer.community}</h4>
+          <a href={links.chat} target="_blank">Telegram</a>
+          <a href={links.twitter} target="_blank">Twitter/X</a>
+          <a href={links.nostr} target="_blank">Nostr</a>
+          <a href={links.github} target="_blank">GitHub</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-supported">
+      <span>{i.footer.featuredBy}</span>
+      <a href="https://hrf.org" target="_blank" rel="noopener noreferrer" class="supported-badge">
+        <img src="/img/hrf-logo.png" alt="Human Rights Foundation" class="hrf-logo" />
+      </a>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© {new Date().getFullYear()} @lnp2pBot. {i.footer.rights}</span>
+      <a href={disclaimerUrl} class="footer-disclaimer">{i.disclaimer.title}</a>
+    </div>
+  </div>
+</footer>
+
+<style>
+  footer { border-top: 1px solid var(--border); padding: 3rem 0 1.5rem; margin-top: 2rem; }
+  .footer-inner { display: flex; flex-direction: column; gap: 2.5rem; }
+  .footer-top { display: flex; justify-content: space-between; gap: 3rem; }
+  .footer-brand { display: flex; flex-direction: column; gap: 0.3rem; }
+  .footer-brand-row { display: flex; align-items: center; gap: 0.5rem; }
+  .footer-logo { width: auto; height: 28px; object-fit: contain; }
+  .footer-name { font-weight: 700; font-size: 1.2rem; }
+  .footer-tagline { color: var(--text-muted); font-size: 0.85rem; }
+  .footer-links { display: flex; gap: 4rem; }
+  .footer-col { display: flex; flex-direction: column; gap: 0.5rem; }
+  .footer-col h4 { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted); margin-bottom: 0.3rem; }
+  .footer-col a { color: var(--text-secondary); font-size: 0.9rem; }
+  .footer-col a:hover { color: var(--text-primary); }
+  .footer-supported {
+    display: flex; align-items: center; justify-content: center; gap: 1rem;
+    padding: 1.5rem; border-radius: var(--radius); background: var(--bg-secondary);
+    color: var(--text-muted); font-size: 0.9rem;
+  }
+  .hrf-logo { height: 36px; width: auto; opacity: 0.8; transition: opacity 0.2s; }
+  .hrf-logo:hover { opacity: 1; }
+  .footer-bottom { text-align: center; color: var(--text-muted); font-size: 0.8rem; display: flex; justify-content: center; align-items: center; gap: 1rem; }
+  .footer-disclaimer { color: var(--text-muted); font-size: 0.8rem; }
+  .footer-disclaimer:hover { color: var(--text-secondary); }
+  @media (max-width: 768px) {
+    .footer-top { flex-direction: column; align-items: center; text-align: center; }
+    .footer-links { gap: 2rem; }
+  }
+</style>

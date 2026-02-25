@@ -1,0 +1,88 @@
+---
+/* Decorative wireframe layers — positioned at edges like the original site style */
+---
+
+<div class="bg-layers" aria-hidden="true">
+  <img src="/img/layer1.png" alt="" class="bg-layer layer-top-left" />
+  <img src="/img/layer2.png" alt="" class="bg-layer layer-top-right" />
+  <img src="/img/layer-left.png" alt="" class="bg-layer layer-bottom-left" />
+  <img src="/img/layer-right.png" alt="" class="bg-layer layer-bottom-right" />
+</div>
+
+<style>
+  .bg-layers {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+  }
+
+  .bg-layer {
+    position: absolute;
+    opacity: 0.06;
+    max-width: 45vw;
+    height: auto;
+    animation: breathe 12s ease-in-out infinite alternate;
+  }
+
+  /* Top-left: warped grid fanning out */
+  .layer-top-left {
+    top: -5%;
+    left: -8%;
+    max-width: 50vw;
+    animation-delay: 0s;
+  }
+
+  /* Top-right: spiral */
+  .layer-top-right {
+    top: -10%;
+    right: -10%;
+    max-width: 40vw;
+    opacity: 0.05;
+    animation-delay: -4s;
+  }
+
+  /* Bottom-left: corner grid */
+  .layer-bottom-left {
+    bottom: -5%;
+    left: -5%;
+    max-width: 35vw;
+    opacity: 0.04;
+    animation-delay: -8s;
+  }
+
+  /* Bottom-right: spiral arcs */
+  .layer-bottom-right {
+    bottom: -8%;
+    right: -8%;
+    max-width: 40vw;
+    opacity: 0.05;
+    animation-delay: -6s;
+  }
+
+  /* Subtle breathing/pulsing — no movement, just opacity shift */
+  @keyframes breathe {
+    0% {
+      opacity: 0.04;
+      transform: scale(1);
+    }
+    100% {
+      opacity: 0.08;
+      transform: scale(1.03);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .bg-layer { animation: none !important; }
+  }
+
+  @media (max-width: 768px) {
+    .layer-bottom-left,
+    .layer-bottom-right { display: none; }
+    .bg-layer { max-width: 60vw; }
+  }
+</style>
