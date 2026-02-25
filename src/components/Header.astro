@@ -35,7 +35,7 @@ const links = getLinks(lang);
           </a>
         ))}
       </div>
-      <a href={links.twitter} target="_blank" rel="noopener noreferrer" class="social-icon social-icon-desktop" aria-label="Twitter">
+      <a href={links.twitter} target="_blank" rel="noopener noreferrer" class="social-icon social-icon-desktop" aria-label="X (formerly Twitter)">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
       </a>
       <a href={links.nostr} target="_blank" rel="noopener noreferrer" class="social-icon social-icon-desktop" aria-label="Nostr">
@@ -54,14 +54,14 @@ const links = getLinks(lang);
 
   <div class="mobile-menu" id="mobile-menu">
     <nav class="mobile-nav">
-      <a href={links.learn} target="_blank">{i.nav.learn}</a>
-      <a href={links.orders} target="_blank">{i.nav.orders}</a>
-      <a href={links.chat} target="_blank">{i.nav.chat}</a>
-      <a href={links.github} target="_blank">{i.nav.github}</a>
+      <a href={links.learn} target="_blank" rel="noopener noreferrer">{i.nav.learn}</a>
+      <a href={links.orders} target="_blank" rel="noopener noreferrer">{i.nav.orders}</a>
+      <a href={links.chat} target="_blank" rel="noopener noreferrer">{i.nav.chat}</a>
+      <a href={links.github} target="_blank" rel="noopener noreferrer">{i.nav.github}</a>
     </nav>
     <div class="mobile-extras">
       <div class="mobile-social">
-        <a href={links.twitter} target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Twitter">
+        <a href={links.twitter} target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="X (formerly Twitter)">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
         </a>
         <a href={links.nostr} target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Nostr">
@@ -87,7 +87,8 @@ const links = getLinks(lang);
   const menu = document.getElementById('mobile-menu');
 
   btn?.addEventListener('click', () => {
-    const isOpen = menu?.classList.toggle('open');
+    if (!menu) return;
+    const isOpen = menu.classList.toggle('open');
     btn.classList.toggle('open', isOpen);
     btn.setAttribute('aria-expanded', String(isOpen));
   });
